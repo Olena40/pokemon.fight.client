@@ -36,3 +36,112 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  display: flex;
+  justify-content: space-around;
+  background-color: #6bd1b2;
+  line-height: 1;
+  font-family: "Muli", sans-serif;
+  max-width: 1000px;
+  margin-left: 7%;
+  background-size: 100%;
+  background-color: #f5e9e1;
+  align-content: center;
+}
+.wrapper {
+  display: flex;
+  max-width: 1900px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+}
+.nav {
+  background-color: #f5e9e1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 40px;
+  font-size: 20px;
+  width: auto;
+}
+.meal {
+  display: flex;
+  justify-content: space-around;
+  color: #e47878;
+  line-height: 1;
+  font-family: "Muli", sans-serif;
+  max-width: 1200px;
+  font-size: 30px;
+  background-color: #f5e9e1;
+  width: auto;
+}
+.pok {
+  width: 170px;
+  height: 150px;
+}
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #2b2eff;
+  color: #2b2eff;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #2b2eff;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #2b2eff;
+}
+
+.paginationDisabled a {
+  color: grey;
+  background-color: grey;
+}
+.pokemon {
+  width: 500px;
+  height: 300px;
+}
+h2 {
+  color: rgb(223, 71, 71);
+  text-align: center;
+}
+.spiel {
+  display: flex;
+  justify-content: space-around;
+  border: solid 2px rgb(162, 162, 216);
+  max-width: 600px;
+  margin-left: 20%;
+  margin-bottom: 5%;
+  background-color: rgb(226, 221, 142);
+}
+.puk {
+  display: flex;
+  flex-direction: column;
+}
+.pik {
+  display: flex;
+  max-width: 500px;
+  margin-left: 25%;
+  justify-content: center;
+}
+h4 {
+  align-items: center;
+}

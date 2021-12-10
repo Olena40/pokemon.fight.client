@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useEffect, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+} from "react-router-dom";
+import Spiel from "./components/Spiel";
+import Pokemon from "./components/Pokemon.js";
 
 function App() {
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    fetch("/pokemon")
+      .then((resp) => resp.json())
+      .then((data) => setArticles(data))
+      .catch((err) => alert(err));
+  }, []);
+  console.log(articles);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav className="nav">
+        <NavLink to="/">
+          <button>Pokemon</button>
+        </NavLink>
+        <NavLink to="/Spiel">
+          <button> Go to the game</button>{" "}
+        </NavLink>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Pokemon />} />
+        <Route path="/Spiel" element={<Spiel dataPokemon={articles} />} />
+      </Routes>
+    </Router>
   );
 }
 
